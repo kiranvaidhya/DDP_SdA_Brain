@@ -15,12 +15,12 @@ except ImportError:
 Prefix = 'SdA'
 
 root = '../BRATS/3D/'
-def test_SdA(finetune_lr=0.1, pretraining_epochs=1,
-             pretrain_lr=0.001, training_epochs=1, 
-             patch_filename = 'Training_patches.npy', groundtruth_filename = 'Training_labels.npy',
-             valid_filename = 'Valid_patches.npy', validtruth_filename = 'Valid_labels.npy',
+def test_SdA(finetune_lr=0.1, pretraining_epochs=100,
+             pretrain_lr=0.001, training_epochs=100, 
+             patch_filename = 'Training_patches_norm.npy', groundtruth_filename = 'Training_labels_norm.npy',
+             valid_filename = 'Validation_patches_norm.npy', validtruth_filename = 'Validation_labels_norm.npy',
 #             test_filename = root+'Testing_patches.npy', testtruth_filename = root+'Testing_labels.npy',
-             batch_size=100, n_ins = 500, n_outs = 5, hidden_layers_sizes = [1000,1000,1000] ):
+             batch_size=100, n_ins = 605, n_outs = 5, hidden_layers_sizes = [1000,1000,1000] ):
                  
     """
     Demonstrates how to train and test a stochastic denoising autoencoder.
@@ -55,7 +55,7 @@ def test_SdA(finetune_lr=0.1, pretraining_epochs=1,
     #########################################################
     #########################################################
     prefix = 'SdA'
-    resumeTraining = True
+    resumeTraining = False
     
     #@@@@@@@@ Needs to be worked on @@@@@@@@@@@@@@@@@
     # Snippet to resume training if the program crashes halfway through #

@@ -155,6 +155,8 @@ class dA(object):
                 dtype=theano.config.floatX
             )
             W = theano.shared(value=initial_W, name='W', borrow=True)
+#        else:
+#            W = theano.shared(value=W,name='W',borrow=True)
 
         if bvis is None:
             bvis = theano.shared(
@@ -164,6 +166,7 @@ class dA(object):
                 ),
                 borrow=True
             )
+            
 
         if bhid is None:
             bhid = theano.shared(
@@ -174,6 +177,8 @@ class dA(object):
                 name='b',
                 borrow=True
             )
+#        else:
+#            bhid = theano.shared(value=bhid,name='b',borrow=True)
 
         self.W = W
         # b corresponds to the bias of the hidden

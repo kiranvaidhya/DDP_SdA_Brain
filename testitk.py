@@ -6,42 +6,24 @@ Created on Thu Jun 25 11:42:21 2015
 """
 
 import itk
-import os
 import numpy as np
-import time
 
-path = '/media/kiran/UUI/BRATS_Outputs/Patients/_Testing'
+path = '../BRATS/Normalised_Testing/'
 outputs = []
-subdirname = []
-subdirs = []
 for subdir, dirs, files in os.walk(path):
         for file1 in files:
             if 'output' in file1:
-                outputs.append(subdir+'/'+file1)
-                subdirs.append(subdir+'/')
-                
-print 'Instantiating itk...'
+                outputs.append[subdir+'/'+file1]
 
 image_type = itk.Image[itk.F,3]
 writer = itk.ImageFileWriter[image_type].New()
-itk_py_converter = itk.PyBuffer[image_type]      
+itk_py_converter = itk.PyBuffer[image_type]            
 
-print 'itk instantiated!'  
-
-start = time.clock()
+outputPath = 'output/'
 for i in xrange(len(outputs)):
-    print 'Iteration: ',i+1
     a=np.load(outputs[i])
-    a=np.transpose(a)
-    b = np.zeros(a.shape)
-    for j in range(a.shape[0]):
-        b[j,:,:] = np.transpose(a[j,:,:])
-    print b.shape
+    a=a.reshape(155,240,240) 
     output_image = itk_py_converter.GetImageFromArray(a.tolist())
-    #Check outputs[i][...]
-    writer.SetFileName(subdirs[i] + '3D_five_'+outputs[i][-28:-23]+'_.mha')
+    writer.SetFileName(outputPath + 'output_'+str(i)+'_.mha')
     writer.SetInput(output_image)
     writer.Update()
-
-stop = time.clock()
-print 'Time Taken: ', (stop - start)/60.
