@@ -1,435 +1,435 @@
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.964415         0.864774         0.927484        0.0765868        0.0355854         0.106723
+                   0.961436         0.865803         0.928075        0.0693974        0.0385642         0.103048
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.964415         0.864774         0.927484        0.0765868        0.0355854         0.106723
+         1         0.961436         0.865803         0.928075        0.0693974        0.0385642         0.103048
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.799259         0.751588         0.858179        -0.147437         0.200741        0.0735229
+                   0.792035         0.746169         0.854635        -0.158075         0.207965        0.0720193
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.799259         0.751588         0.858179        -0.147437         0.200741        0.0735229
+         1         0.792035         0.746169         0.854635        -0.158075         0.207965        0.0720193
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.978474         0.766899         0.868073         0.225659        0.0215256          0.21994
+                     0.9756         0.763951         0.866182         0.224311        0.0243997         0.221169
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.978474         0.766899         0.868073         0.225659        0.0215256          0.21994
+         1           0.9756         0.763951         0.866182         0.224311        0.0243997         0.221169
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.925032         0.697862         0.822048          0.22266        0.0749679         0.260303
+                   0.921883         0.701194         0.824355         0.211585        0.0781169         0.254512
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.925032         0.697862         0.822048          0.22266        0.0749679         0.260303
+         1         0.921883         0.701194         0.824355         0.211585        0.0781169         0.254512
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                     0.9586         0.859794         0.924612        0.0709119           0.0414         0.107048
+                   0.955909         0.854346         0.921453        0.0720917        0.0440906         0.110606
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1           0.9586         0.859794         0.924612        0.0709119           0.0414         0.107048
+         1         0.955909         0.854346         0.921453        0.0720917        0.0440906         0.110606
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.762181         0.731816         0.845143        -0.217696         0.237819        0.0516291
+                   0.746125         0.719084          0.83659        -0.242492         0.253875        0.0479818
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.762181         0.731816         0.845143        -0.217696         0.237819        0.0516291
+         1         0.746125         0.719084          0.83659        -0.242492         0.253875        0.0479818
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.960976         0.874756         0.933195        0.0578198        0.0390237        0.0930259
+                   0.959256         0.874682         0.933152        0.0544256        0.0407438        0.0915688
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.960976         0.874756         0.933195        0.0578198        0.0390237        0.0930259
+         1         0.959256         0.874682         0.933152        0.0544256        0.0407438        0.0915688
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.894942         0.837123         0.911341       -0.0366493         0.105058        0.0716471
+                   0.891828         0.836732          0.91111       -0.0432406         0.108172        0.0687567
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.894942         0.837123         0.911341       -0.0366493         0.105058        0.0716471
+         1         0.891828         0.836732          0.91111       -0.0432406         0.108172        0.0687567
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.390144         0.382211         0.553043        -0.835073         0.609856        0.0505102
+                   0.379671         0.373347         0.543704        -0.864076         0.620329        0.0427109
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.390144         0.382211         0.553043        -0.835073         0.609856        0.0505102
+         1         0.379671         0.373347         0.543704        -0.864076         0.620329        0.0427109
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                    0.96938         0.738057          0.84929         0.247768        0.0306197         0.244326
+                   0.969969         0.734265         0.846774         0.254018        0.0300312         0.248654
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1          0.96938         0.738057          0.84929         0.247768        0.0306197         0.244326
+         1         0.969969         0.734265         0.846774         0.254018        0.0300312         0.248654
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.817327         0.728378         0.842846       -0.0624443         0.182673         0.129991
+                   0.800779         0.720669         0.837662       -0.0921169         0.199221         0.121894
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.817327         0.728378         0.842846       -0.0624443         0.182673         0.129991
+         1         0.800779         0.720669         0.837662       -0.0921169         0.199221         0.121894
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                    0.88958         0.730202         0.844065         0.102327          0.11042         0.197018
+                   0.883907         0.748083         0.855889        0.0633958         0.116093         0.170407
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1          0.88958         0.730202         0.844065         0.102327          0.11042         0.197018
+         1         0.883907         0.748083         0.855889        0.0633958         0.116093         0.170407
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.815506         0.636172         0.777634        0.0928788         0.184494         0.256876
+                   0.807652         0.633842         0.775892        0.0786478         0.192348         0.253465
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.815506         0.636172         0.777634        0.0928788         0.184494         0.256876
+         1         0.807652         0.633842         0.775892        0.0786478         0.192348         0.253465
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.897971         0.811551         0.895973       0.00444795         0.102029         0.106015
+                   0.891223         0.810831         0.895535       -0.0096755         0.108777         0.100112
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.897971         0.811551         0.895973       0.00444795         0.102029         0.106015
+         1         0.891223         0.810831         0.895535       -0.0096755         0.108777         0.100112
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                    0.74701         0.547594         0.707671         0.105323          0.25299         0.327731
+                    0.70744         0.539072         0.700516        0.0195759          0.29256         0.306274
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1          0.74701         0.547594         0.707671         0.105323          0.25299         0.327731
+         1          0.70744         0.539072         0.700516        0.0195759          0.29256         0.306274
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.847801         0.664258         0.798264          0.11686         0.152199         0.245804
+                   0.824299         0.673674         0.805024        0.0467659         0.175701          0.21337
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.847801         0.664258         0.798264          0.11686         0.152199         0.245804
+         1         0.824299         0.673674         0.805024        0.0467659         0.175701          0.21337
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.819694          0.64383         0.783329        0.0887273         0.180306         0.249946
+                   0.800204         0.648163         0.786528        0.0341819         0.199796         0.226689
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.819694          0.64383         0.783329        0.0887273         0.180306         0.249946
+         1         0.800204         0.648163         0.786528        0.0341819         0.199796         0.226689
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.822694         0.539561         0.700928         0.296017         0.177306          0.38944
+                   0.802406         0.545083         0.705571         0.241362         0.197594         0.370408
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.822694         0.539561         0.700928         0.296017         0.177306          0.38944
+         1         0.802406         0.545083         0.705571         0.241362         0.197594         0.370408
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.860271         0.585516         0.738581          0.28291         0.139729         0.352948
+                   0.841621         0.596059         0.746914         0.225059         0.158379         0.328634
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.860271         0.585516         0.738581          0.28291         0.139729         0.352948
+         1         0.841621         0.596059         0.746914         0.225059         0.158379         0.328634
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.836589         0.669577         0.802092        0.0824722         0.163411         0.229674
+                   0.795294         0.660985         0.795895      -0.00151336         0.204706         0.203502
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.836589         0.669577         0.802092        0.0824722         0.163411         0.229674
+         1         0.795294         0.660985         0.795895      -0.00151336         0.204706         0.203502
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.874283         0.808695          0.89423       -0.0456302         0.125717        0.0848914
+                   0.876593          0.81178         0.896113       -0.0445377         0.123407        0.0834768
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.874283         0.808695          0.89423       -0.0456302         0.125717        0.0848914
+         1         0.876593          0.81178         0.896113       -0.0445377         0.123407        0.0834768
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.809417          0.65811         0.793807         0.038571         0.190583         0.221212
+                   0.805219         0.664645         0.798543        0.0165822         0.194781         0.208024
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.809417          0.65811         0.793807         0.038571         0.190583         0.221212
+         1         0.805219         0.664645         0.798543        0.0165822         0.194781         0.208024
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.672582         0.608764          0.75681         -0.25046         0.327418         0.134847
+                   0.666222          0.60427         0.753327        -0.261489         0.333778         0.133365
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.672582         0.608764          0.75681         -0.25046         0.327418         0.134847
+         1         0.666222          0.60427         0.753327        -0.261489         0.333778         0.133365
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.483447         0.459031         0.629227        -0.603084         0.516553        0.0991201
+                   0.436582         0.416849         0.588417        -0.695562         0.563418        0.0978223
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.483447         0.459031         0.629227        -0.603084         0.516553        0.0991201
+         1         0.436582         0.416849         0.588417        -0.695562         0.563418        0.0978223
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.934553         0.728451         0.842894         0.196156        0.0654466         0.232391
+                   0.930132         0.733246         0.846096         0.180697        0.0698682         0.224013
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.934553         0.728451         0.842894         0.196156        0.0654466         0.232391
+         1         0.930132         0.733246         0.846096         0.180697        0.0698682         0.224013
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.672439         0.615667         0.762121        -0.266738         0.327561         0.120593
+                   0.668966         0.619037         0.764697        -0.286206         0.331034         0.107597
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.672439         0.615667         0.762121        -0.266738         0.327561         0.120593
+         1         0.668966         0.619037         0.764697        -0.286206         0.331034         0.107597
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.890987         0.584889         0.738082         0.343226         0.109013         0.370029
+                   0.847523         0.629214         0.772414         0.177242         0.152477         0.290465
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.890987         0.584889         0.738082         0.343226         0.109013         0.370029
+         1         0.847523         0.629214         0.772414         0.177242         0.152477         0.290465
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                    0.94237         0.448854         0.619598         0.685021        0.0576303         0.538478
+                   0.939058         0.449934         0.620627         0.678194        0.0609418         0.536533
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1          0.94237         0.448854         0.619598         0.685021        0.0576303         0.538478
+         1         0.939058         0.449934         0.620627         0.678194        0.0609418         0.536533
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.949039         0.776652         0.874287         0.157531        0.0509609         0.189548
+                   0.944324         0.783942         0.878887         0.138589        0.0556761         0.178068
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.949039         0.776652         0.874287         0.157531        0.0509609         0.189548
+         1         0.944324         0.783942         0.878887         0.138589        0.0556761         0.178068
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.780007         0.679669         0.809289       -0.0750817         0.219993         0.159144
+                   0.757504         0.668999         0.801677        -0.116626         0.242496          0.14868
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.780007         0.679669         0.809289       -0.0750817         0.219993         0.159144
+         1         0.757504         0.668999         0.801677        -0.116626         0.242496          0.14868
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.904972         0.833482         0.909179       -0.0092978        0.0950278        0.0865743
+                   0.893806         0.831297         0.907878       -0.0314885         0.106194        0.0775994
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.904972         0.833482         0.909179       -0.0092978        0.0950278        0.0865743
+         1         0.893806         0.831297         0.907878       -0.0314885         0.106194        0.0775994
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.202136         0.194406         0.325527         -1.22087         0.797864         0.164378
+                   0.192816         0.186506         0.314378          -1.2609         0.807184         0.149289
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.202136         0.194406         0.325527         -1.22087         0.797864         0.164378
+         1         0.192816         0.186506         0.314378          -1.2609         0.807184         0.149289
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.439217         0.374314         0.544728        -0.480452         0.560783         0.283039
+                   0.388255         0.336745         0.503828        -0.595348         0.611745         0.282629
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.439217         0.374314         0.544728        -0.480452         0.560783         0.283039
+         1         0.388255         0.336745         0.503828        -0.595348         0.611745         0.282629
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.800739         0.501041         0.667592         0.332561         0.199261         0.427589
+                   0.755671         0.486238          0.65432         0.268239         0.244329         0.423059
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.800739         0.501041         0.667592         0.332561         0.199261         0.427589
+         1         0.755671         0.486238          0.65432         0.268239         0.244329         0.423059
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.742389         0.573182         0.728691        0.0369026         0.257611         0.284511
+                   0.708502         0.557679         0.716039        -0.021276         0.291498         0.276262
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.742389         0.573182         0.728691        0.0369026         0.257611         0.284511
+         1         0.708502         0.557679         0.716039        -0.021276         0.291498         0.276262
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.859238         0.591367         0.743219         0.270052         0.140762         0.345196
+                   0.850434         0.628915         0.772189         0.184013         0.149566         0.292872
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.859238         0.591367         0.743219         0.270052         0.140762         0.345196
+         1         0.850434         0.628915         0.772189         0.184013         0.149566         0.292872
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.801669         0.548445         0.708382         0.232731         0.198331         0.365457
+                   0.764693         0.545349         0.705794         0.154047         0.235307         0.344682
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.801669         0.548445         0.708382         0.232731         0.198331         0.365457
+         1         0.764693         0.545349         0.705794         0.154047         0.235307         0.344682
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                    0.68133         0.640196         0.780633          -0.2915          0.31867         0.086177
+                    0.64347         0.619715         0.765215        -0.378401          0.35653        0.0562212
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1          0.68133         0.640196         0.780633          -0.2915          0.31867         0.086177
+         1          0.64347         0.619715         0.765215        -0.378401          0.35653        0.0562212
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.431069         0.222557         0.364084         0.310786         0.568931         0.684883
+                   0.394077         0.236034         0.381921        0.0616901         0.605923         0.629506
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.431069         0.222557         0.364084         0.310786         0.568931         0.684883
+         1         0.394077         0.236034         0.381921        0.0616901         0.605923         0.629506
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.279363          0.11484         0.206021         0.525063         0.720637         0.836819
+                   0.274702         0.133591         0.235696          0.28399         0.725298         0.793611
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.279363          0.11484         0.206021         0.525063         0.720637         0.836819
+         1         0.274702         0.133591         0.235696          0.28399         0.725298         0.793611
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                    0.33731         0.143164          0.25047         0.514899          0.66269         0.800811
+                    0.31364         0.150247         0.261243         0.334122          0.68636         0.776153
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1          0.33731         0.143164          0.25047         0.514899          0.66269         0.800811
+         1          0.31364         0.150247         0.261243         0.334122          0.68636         0.776153
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.183924        0.0735695         0.137056         0.509645         0.816076         0.890777
+                   0.193494        0.0882353         0.162162         0.323854         0.806506         0.860437
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.183924        0.0735695         0.137056         0.509645         0.816076         0.890777
+         1         0.193494        0.0882353         0.162162         0.323854         0.806506         0.860437
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.348189        0.0463375        0.0885708          1.49125         0.651811         0.949261
+                   0.388467        0.0798495          0.14789           1.2386         0.611533          0.90867
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.348189        0.0463375        0.0885708          1.49125         0.651811         0.949261
+         1         0.388467        0.0798495          0.14789           1.2386         0.611533          0.90867
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.330986          0.21267         0.350746        -0.119403         0.669014         0.626984
+                   0.281195         0.208572         0.345155        -0.454917         0.718805         0.553221
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.330986          0.21267         0.350746        -0.119403         0.669014         0.626984
+         1         0.281195         0.208572         0.345155        -0.454917         0.718805         0.553221
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.893488         0.750721         0.857614        0.0803003         0.106512          0.17549
+                   0.879715         0.750162         0.857249        0.0510757         0.120285         0.164099
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.893488         0.750721         0.857614        0.0803003         0.106512          0.17549
+         1         0.879715         0.750162         0.857249        0.0510757         0.120285         0.164099
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                    0.78635         0.592511         0.744122         0.107402          0.21365         0.293802
+                   0.781024         0.615455         0.761959        0.0488218         0.218976         0.256198
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1          0.78635         0.592511         0.744122         0.107402          0.21365         0.293802
+         1         0.781024         0.615455         0.761959        0.0488218         0.218976         0.256198
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.936809         0.641102         0.781307         0.331983        0.0631911         0.329921
+                   0.930794         0.653117         0.790164         0.302172        0.0692057         0.313549
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.936809         0.641102         0.781307         0.331983        0.0631911         0.329921
+         1         0.930794         0.653117         0.790164         0.302172        0.0692057         0.313549
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.710183         0.651575         0.789035         -0.22206         0.289817         0.112417
+                   0.663347         0.615723         0.762164        -0.297937         0.336653         0.104423
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.710183         0.651575         0.789035         -0.22206         0.289817         0.112417
+         1         0.663347         0.615723         0.762164        -0.297937         0.336653         0.104423
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.815068         0.700876         0.824135       -0.0222494         0.184932         0.166594
+                   0.823363         0.697576          0.82185       0.00367691         0.176637         0.179659
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.815068         0.700876         0.824135       -0.0222494         0.184932         0.166594
+         1         0.823363         0.697576          0.82185       0.00367691         0.176637         0.179659
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                    0.47389          0.44912         0.619852        -0.616019          0.52611         0.104247
+                   0.493508         0.464589          0.63443        -0.571099         0.506492         0.112004
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1          0.47389          0.44912         0.619852        -0.616019          0.52611         0.104247
+         1         0.493508         0.464589          0.63443        -0.571099         0.506492         0.112004
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.791608         0.630992         0.773753        0.0451128         0.208392         0.243316
+                   0.815923         0.638756         0.779562         0.089128         0.184077         0.253696
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.791608         0.630992         0.773753        0.0451128         0.208392         0.243316
+         1         0.815923         0.638756         0.779562         0.089128         0.184077         0.253696
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.819003         0.570421         0.726456            0.226         0.180997           0.3473
+                   0.818092         0.588364         0.740842         0.188853         0.181908         0.323077
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.819003         0.570421         0.726456            0.226         0.180997           0.3473
+         1         0.818092         0.588364         0.740842         0.188853         0.181908         0.323077
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.863793          0.78433         0.879131       -0.0355125         0.136207         0.104977
+                   0.874618          0.79174         0.883766       -0.0209191         0.125382         0.106892
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.863793          0.78433         0.879131       -0.0355125         0.136207         0.104977
+         1         0.874618          0.79174         0.883766       -0.0209191         0.125382         0.106892
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.713959         0.651324         0.788851        -0.209794         0.286041         0.118704
+                    0.71008         0.628115         0.771585        -0.173236          0.28992         0.155244
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.713959         0.651324         0.788851        -0.209794         0.286041         0.118704
+         1          0.71008         0.628115         0.771585        -0.173236          0.28992         0.155244
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.892111          0.81833          0.90009       -0.0178874         0.107889        0.0917874
+                   0.886046         0.815375         0.898299       -0.0276583         0.113954        0.0891036
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.892111          0.81833          0.90009       -0.0178874         0.107889        0.0917874
+         1         0.886046         0.815375         0.898299       -0.0276583         0.113954        0.0891036
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.530319         0.509688         0.675223        -0.546478         0.469681        0.0709143
+                   0.568282         0.526058         0.689434         -0.42638         0.431718          0.12376
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.530319         0.509688         0.675223        -0.546478         0.469681        0.0709143
+         1         0.568282         0.526058         0.689434         -0.42638         0.431718          0.12376
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.288873         0.276086         0.432708        -0.995836         0.711127         0.138173
+                   0.274926         0.262997         0.416465         -1.02965         0.725074         0.141618
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.288873         0.276086         0.432708        -0.995836         0.711127         0.138173
+         1         0.274926         0.262997         0.416465         -1.02965         0.725074         0.141618
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.790427         0.708381         0.829301       -0.0983618         0.209573         0.127803
+                   0.789628         0.713949         0.833104        -0.110119         0.210372         0.118353
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.790427         0.708381         0.829301       -0.0983618         0.209573         0.127803
+         1         0.789628         0.713949         0.833104        -0.110119         0.210372         0.118353
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.551656         0.521759         0.685732        -0.486084         0.448344         0.094095
+                   0.524913         0.497774         0.664685        -0.532551         0.475087         0.094095
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.551656         0.521759         0.685732        -0.486084         0.448344         0.094095
+         1         0.524913         0.497774         0.664685        -0.532551         0.475087         0.094095
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.545772         0.510201         0.675673        -0.476029         0.454228         0.113273
+                   0.522849         0.493433         0.660804        -0.527706         0.477151         0.102348
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.545772         0.510201         0.675673        -0.476029         0.454228         0.113273
+         1         0.522849         0.493433         0.660804        -0.527706         0.477151         0.102348
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.590521         0.403061         0.574545        0.0541105         0.409479          0.44059
+                   0.578597         0.397249         0.568616        0.0344989         0.421403         0.441026
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.590521         0.403061         0.574545        0.0541105         0.409479          0.44059
+         1         0.578597         0.397249         0.568616        0.0344989         0.421403         0.441026
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.517635         0.496254         0.663328        -0.562917         0.482365        0.0768406
+                   0.530277           0.4999         0.666578        -0.514073         0.469723         0.102812
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.517635         0.496254         0.663328        -0.562917         0.482365        0.0768406
+         1         0.530277           0.4999         0.666578        -0.514073         0.469723         0.102812
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                  0.0855532        0.0820742         0.151698         -1.54629         0.914447         0.331307
+                  0.0738452        0.0714736         0.133412         -1.61328         0.926155          0.31003
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1        0.0855532        0.0820742         0.151698         -1.54629         0.914447         0.331307
+         1        0.0738452        0.0714736         0.133412         -1.61328         0.926155          0.31003
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                  0.0136327        0.0134281        0.0265004         -1.88776         0.986367         0.527778
+                  0.0101476             0.01         0.019802         -1.90279         0.989852         0.592593
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1        0.0136327        0.0134281        0.0265004         -1.88776         0.986367         0.527778
+         1        0.0101476             0.01         0.019802         -1.90279         0.989852         0.592593
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                  0.0231413        0.0228488        0.0446768         -1.86122         0.976859         0.356164
+                  0.0177541        0.0174978        0.0343938         -1.87446         0.982246         0.452055
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1        0.0231413        0.0228488        0.0446768         -1.86122         0.976859         0.356164
+         1        0.0177541        0.0174978        0.0343938         -1.87446         0.982246         0.452055
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                 0.00857538       0.00839653        0.0166532         -1.88396         0.991425         0.712963
+                 0.00902659        0.0088729        0.0175897         -1.89731         0.990973         0.657407
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1       0.00857538       0.00839653        0.0166532         -1.88396         0.991425         0.712963
+         1       0.00902659        0.0088729        0.0175897         -1.89731         0.990973         0.657407
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                  0.0316092        0.0297565        0.0577933         -1.65674         0.968391         0.663265
+                  0.0228707        0.0216904        0.0424597         -1.71303         0.977129         0.704082
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1        0.0316092        0.0297565        0.0577933         -1.65674         0.968391         0.663265
+         1        0.0228707        0.0216904        0.0424597         -1.71303         0.977129         0.704082
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                  0.0593403        0.0586477         0.110797          -1.7343          0.94066         0.165992
+                  0.0485267        0.0482571        0.0920711         -1.79466         0.951473         0.103239
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1        0.0593403        0.0586477         0.110797          -1.7343          0.94066         0.165992
+         1        0.0485267        0.0482571        0.0920711         -1.79466         0.951473         0.103239
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.737107         0.590776         0.742752       -0.0153165         0.262893         0.251516
+                   0.746868         0.590315         0.742388        0.0119984         0.253132          0.26204
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.737107         0.590776         0.742752       -0.0153165         0.262893         0.251516
+         1         0.746868         0.590315         0.742388        0.0119984         0.253132          0.26204
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.539576         0.502408         0.668804           -0.479         0.460424         0.120573
+                   0.535153         0.503636         0.669891        -0.503549         0.464847         0.104694
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.539576         0.502408         0.668804           -0.479         0.460424         0.120573
+         1         0.535153         0.503636         0.669891        -0.503549         0.464847         0.104694
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.767688         0.549507         0.709267         0.152201         0.232312         0.340892
+                   0.791325         0.534211         0.696398         0.239918         0.208675         0.378193
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.767688         0.549507         0.709267         0.152201         0.232312         0.340892
+         1         0.791325         0.534211         0.696398         0.239918         0.208675         0.378193
                                           ************ All Labels *************
                       Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-                   0.624835         0.577606         0.732256        -0.343838         0.375165         0.115719
+                   0.583462         0.541922         0.702917         -0.40947         0.416538         0.116122
                                        ************ Individual Labels *************
      Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
-         1         0.624835         0.577606         0.732256        -0.343838         0.375165         0.115719
+         1         0.583462         0.541922         0.702917         -0.40947         0.416538         0.116122
 brats_tcia_pat105_0001
 brats_tcia_pat111_0001
 brats_tcia_pat113_0001

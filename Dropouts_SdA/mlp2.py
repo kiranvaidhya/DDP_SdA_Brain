@@ -18,6 +18,15 @@ from logistic_sgd import LogisticRegression
 from load_data import *
 from updates import *
 
+from sklearn.metrics import confusion_matrix
+
+try:
+    import PIL.Image as Image
+except ImportError:
+    import Image
+
+from utils import tile_raster_images
+
 
 ##################################
 ## Various activation functions ##
@@ -203,9 +212,12 @@ class MLP(object):
 
         self.negative_log_likelihood = self.layers[-1].negative_log_likelihood
         self.errors = self.layers[-1].errors
+        self.pred = self.layers[-1].y_pred
 
         # Grab all the parameters together.
         self.params = [ param for layer in self.dropout_layers for param in layer.params ]
+
+    
 
 
 def test_mlp(
@@ -279,6 +291,11 @@ def test_mlp(
     p3 = T.sum(T.eq(train_set_y, 3)).eval() / float(train_set_y.shape[0].eval())
     p4 = T.sum(T.eq(train_set_y, 4)).eval() / float(train_set_y.shape[0].eval())
 
+    print 'Probability 1: ',p1
+    print 'Probability 2: ',p2
+    print 'Probability 3: ',p3
+    print 'Probability 4: ',p4
+
     rng = np.random.RandomState(random_seed)
 
     # construct the MLP class
@@ -295,8 +312,8 @@ def test_mlp(
     print '#############################'
 
     # Build the expresson for the cost function.
-    cost = classifier.negative_log_likelihood(y)
-    dropout_cost = classifier.dropout_negative_log_likelihood(y)
+    cost = classifier.negative_log_likelihood(y, p1, p2, p3, p4)
+    dropout_cost = classifier.dropout_negative_log_likelihood(y, p1, p2, p3, p4)
 
     # Compile theano function for testing.
     test_model = theano.function(inputs=[index],
@@ -320,6 +337,13 @@ def test_mlp(
         # Create a function that scans the entire test set
     def test_score():
         return [test_model(i) for i in xrange(n_test_batches)]
+
+    def get_prediction(train_set_x, batch_size):
+        prediction = theano.function(inputs = [index], outputs = classifier.pred,
+                  givens={x: train_set_x[index * batch_size: (index + 1) * batch_size]})
+        return prediction
+
+
 
 
     #theano.printing.pydotprint(validate_model, outfile="validate_file.png",
@@ -380,7 +404,7 @@ def test_mlp(
     #     else:
     #         updates[param] = stepped_param
 
-    updates = sgd(dropout_cost if dropout else cost, classifier.params, learning_rate = initial_learning_rate)
+    updates = adagrad(dropout_cost if dropout else cost, classifier.params, learning_rate = initial_learning_rate)
 
     # Compile theano function for training.  This returns the training cost and
     # updates the model parameters.
@@ -404,6 +428,13 @@ def test_mlp(
     # TRAIN MODEL #
     ###############
     print '... training'
+
+    ########################confusion matrix Block 1##########################    
+    prediction = get_prediction(train_set_x,batch_size)
+    y_truth = numpy.load(train_label)
+    y_truth = y_truth[0:(len(y_truth)-(len(y_truth)%batch_size))]
+    cnf_freq = 1
+    #################################
 
     patience = 40 * n_train_batches  # look as this many examples regardless
     patience_increase = 10.  # wait this much longer when a new best is
@@ -432,12 +463,24 @@ def test_mlp(
     adapt_counter = 0
     log_valid_cost = []
 
+    shapeimg = [(33,44),(50,60), (25,40), (50,10)]
+
     # results_file = open(results_file_name, 'wb')
 
 
     while epoch_counter < n_epochs:
         # Train this epoch
         epoch_counter = epoch_counter + 1
+
+        ################################confusion matrix block 2#################
+        if epoch_counter%cnf_freq==0:
+            pred_c = numpy.array([])
+            for minibatch_index in xrange(n_train_batches):
+                pred_c = numpy.concatenate([pred_c,numpy.array(prediction(minibatch_index))])
+        
+            cnf_matrix = confusion_matrix(y_truth, pred_c)
+            print cnf_matrix
+            ##########################################################################
         c = []
         for minibatch_index in xrange(n_train_batches):
             minibatch_avg_cost = train_model(epoch_counter, minibatch_index)
@@ -510,6 +553,14 @@ def test_mlp(
             #if patience <= iter:
             #    done_looping = True
             #    break
+
+        if epoch_counter%10 == 0 and epoch_counter!=0 or epoch_counter == 399 or epoch_counter == 199:
+            for i in xrange(len(classifier.params)/2 - 1):
+                image = Image.fromarray(tile_raster_images(
+                    X=classifier.params[2*i].get_value(borrow=True).T,
+                    img_shape=shapeimg[i], tile_shape=(40,layer_sizes[i+1]/20),
+                    tile_spacing=(1, 1)))
+                image.save(prefix+str(i) + '_' + str(epoch_counter)+'.png')
 
     end_time = time.clock()
     print(

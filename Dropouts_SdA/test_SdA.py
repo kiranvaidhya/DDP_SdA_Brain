@@ -18,7 +18,7 @@ def test_SdA(finetune_lr=0.1, pretraining_epochs=1,
              b_valid_filename = 'b_Validation_patches_norm.npy', b_validtruth_filename = 'b_Validation_labels_norm.npy',
              u_patch_filename = 'u_Training_patches_norm.npy', u_groundtruth_filename = 'u_Training_labels_norm.npy',
              u_valid_filename = 'u_Validation_patches_norm.npy', u_validtruth_filename = 'u_Validation_labels_norm.npy',
-             batch_size=100, n_ins = 605, n_outs = 5, hidden_layers_sizes = [1000,1000,1000],prefix = '11_11_3_G4_', corruption_levels=[0.2,0.2,0.2], resumeTraining = False):
+             batch_size=100, n_ins = 605, n_outs = 5, hidden_layers_sizes = [1000,1000,1000],prefix = '11_11_3_G4_', corruption_levels=[0.2,0.2,0.2], resumeTraining = False, StopAtPretraining = False):
                  
     """
     Demonstrates how to train and test a stochastic denoising autoencoder.
@@ -138,7 +138,9 @@ def test_SdA(finetune_lr=0.1, pretraining_epochs=1,
         ## Pre-train layer-wise
         log_pretrain_cost = []
 
-        shapeimg = [(27,36),(50,40), (25,40), (5,10)]
+        
+
+        shapeimg = [(33,44),(50,60), (25,40), (50,10)]
 
         #corruption_levels = [.001, .001, .001]
         for i in xrange(sda.n_layers):
@@ -150,6 +152,7 @@ def test_SdA(finetune_lr=0.1, pretraining_epochs=1,
             best_cost = numpy.inf
             adapt_counter = 0
             learning_rate = pretrain_lr
+
             if i==0:
                 num_of_epochs = 400
             else:
@@ -173,47 +176,48 @@ def test_SdA(finetune_lr=0.1, pretraining_epochs=1,
                 print numpy.mean(c)
                 current_cost = numpy.mean(c)
                 log_pretrain_cost.append(numpy.mean(c))
-                if current_cost <best_cost:
+                if current_cost < best_cost:
                     best_cost = current_cost
                 if current_cost > best_cost :
                     adapt_counter = adapt_counter+1
-                if adapt_counter>25:
-                    
-                    learning_rate = learning_rate * 0.8
-                    print 'Reducing learning rate', learning_rate
-                    adapt_counter = 0
+                # if adapt_counter>25:
+                itr = epoch + 1
+                learning_rate = learning_rate / ( 1 + itr * 5e-05)
+                # print 'Reducing learning rate', learning_rate
+                adapt_counter = 0
 
             
                 previous_cost = current_cost
-                save_valid = open(prefix+'pre_training.pkl', 'wb')
-                #print 'YO! i=',i,' epoch=',epoch,' cost=',numpy.mean(c) 
-                #print pretrain_lr
-                genVariables = [i, epoch, numpy.mean(c), pretrain_lr]
-                cPickle.dump(genVariables,save_valid,protocol = cPickle.HIGHEST_PROTOCOL)
-                for j in xrange(len(sda.params)):
-                    cPickle.dump(sda.params[j].get_value(borrow=True), save_valid, protocol = cPickle.HIGHEST_PROTOCOL)
-                save_valid.close()
+                
 
-                if epoch%50 == 0 and epoch!=0:
+                if epoch%50 == 0 and epoch!=0 or epoch == 399 or epoch == 199:
                     image = Image.fromarray(tile_raster_images(
                         X=sda.params[2*i].get_value(borrow=True).T,
                         img_shape=shapeimg[i], tile_shape=(40,hidden_layers_sizes[i]/20),
                         tile_spacing=(1, 1)))
                     image.save(prefix+str(i) + '_' + str(epoch)+'.png')
         
-        
+
+            save_valid = open(prefix+'pre_training.pkl', 'wb')
+            genVariables = ['gen']
+            cPickle.dump(genVariables,save_valid,protocol = cPickle.HIGHEST_PROTOCOL)
+            for j in xrange(len(sda.params)):
+                cPickle.dump(sda.params[j].get_value(borrow=True), save_valid, protocol = cPickle.HIGHEST_PROTOCOL)
+            save_valid.close()
+
+
         pretrain_log_file = open(prefix + 'log_pretrain_cost.txt', "a")
         for l in log_pretrain_cost:
             pretrain_log_file.write("%f\n"%l)
         pretrain_log_file.close()
         
-        for k in [0,2,4,6]:
-            print k
-            image = Image.fromarray(tile_raster_images(
-               X=sda.params[k].get_value(borrow=True).T,
-               img_shape=shapeimg[k/2], tile_shape=(40,hidden_layers_sizes[k/2]/20),
-               tile_spacing=(1, 1)))
-            image.save(prefix+str(k/2)+'.png')
+        # for k in [0,2,4,6]:
+        #     print k
+        #     image = Image.fromarray(tile_raster_images(
+        #        X=sda.params[k].get_value(borrow=True).T,
+        #        img_shape=shapeimg[k/2], tile_shape=(40,hidden_layers_sizes[k/2]/20),
+        #        tile_spacing=(1, 1)))
+        #     image.save(prefix+str(k/2)+'.png')
 
 
         #print sda.params[0]
@@ -257,130 +261,151 @@ def test_SdA(finetune_lr=0.1, pretraining_epochs=1,
             hidden_layers_sizes=hidden_layers_sizes,
             n_outs=n_outs, W = W, b = b)
         
-    print 'SdA constructed'
+        print 'SdA constructed'
         
+    if StopAtPretraining == False:  
         
-    print '... getting the finetuning functions'
-    train_fn, validate_model, test_model = sda.build_finetune_functions(datasets=datasets,batch_size=batch_size)
-    print batch_size
+        print '... getting the finetuning functions'
+        train_fn, validate_model, test_model = sda.build_finetune_functions(datasets=datasets,batch_size=batch_size)
+        print batch_size
 
-    print '... finetunning the model'
-    # early-stopping parameters
-    patience = 40 * n_train_batches  # look as this many examples regardless
-    patience_increase = 10.  # wait this much longer when a new best is
-                            # found
-    improvement_threshold = 0.995  # a relative improvement of this much is
-                                   # considered significant
-    validation_frequency = min(n_train_batches, patience / 2)
-                                  # go through this many
-                                  # minibatche before checking the network
-                                  # on the validation set; in this case we
-                                  # check every epoch
+        print '... finetunning the model'
+        ########################confusion matrix Block 1##########################    
+        prediction = sda.get_prediction(train_set_x,batch_size)
+        y_truth = np.load(u_groundtruth_filename)
+        y_truth = y_truth[0:(len(y_truth)-(len(y_truth)%batch_size))]
+        cnf_freq = 1
+        ##################################################################  
+        # early-stopping parameters
+        patience = 40 * n_train_batches  # look as this many examples regardless
+        patience_increase = 10.  # wait this much longer when a new best is
+                                # found
+        improvement_threshold = 0.995  # a relative improvement of this much is
+                                       # considered significant
+        validation_frequency = min(n_train_batches, patience / 2)
+                                      # go through this many
+                                      # minibatche before checking the network
+                                      # on the validation set; in this case we
+                                      # check every epoch
 
-    best_validation_loss = numpy.inf
-    test_score = 0.
-    start_time = time.clock()
+        best_validation_loss = numpy.inf
+        test_score = 0.
+        start_time = time.clock()
 
-    done_looping = False
-    epoch = 0
-    flag = open(prefix+'flag.pkl','wb')
-    cPickle.dump(2,flag, protocol = cPickle.HIGHEST_PROTOCOL)
-    flag.close()
-    
-    log_valid_cost=[]
-    adapt_counter = 0
-    while (epoch < training_epochs) and (not done_looping):
+        finetune_lr_initial = finetune_lr
+
+        done_looping = False
+        epoch = 0
+        flag = open(prefix+'flag.pkl','wb')
+        cPickle.dump(2,flag, protocol = cPickle.HIGHEST_PROTOCOL)
+        flag.close()
         
-#        if epochFlag_fineTuning is 1 and epoch < epochs_done_fineTuning:
-#            epoch = epochs_done_fineTuning
-#            epochFlag_fineTuning = 0
+        log_valid_cost=[]
+        adapt_counter = 0
+        while (epoch < training_epochs) and (not done_looping):
             
-        epoch = epoch + 1
-        c = []
-        for minibatch_index in xrange(n_train_batches):
-            minibatch_avg_cost = train_fn(index=minibatch_index,lr=finetune_lr)
-            c.append(minibatch_avg_cost)
-#            if iterFlag is 1 and iter < iters_done:
-#                iter = iters_done
-#                iterFlag = 0
-                    
-            iter = (epoch - 1) * n_train_batches + minibatch_index
-
-            if (iter + 1) % validation_frequency == 0:
-                validation_losses = validate_model()
-                this_validation_loss = numpy.mean(validation_losses)
-                print('epoch %i, minibatch %i/%i, validation error %f %%' %
-                      (epoch, minibatch_index + 1, n_train_batches,
-                       this_validation_loss * 100.))
-                log_valid_cost.append(this_validation_loss)
-
-                # if we got the best validation score until now
-                if this_validation_loss < best_validation_loss:
-
-                    #improve patience if loss improvement is good enough
-                    if (
-                        this_validation_loss < best_validation_loss *
-                        improvement_threshold
-                    ):
-                        patience = max(patience, iter * patience_increase)
-
-                    # save best validation score and iteration number
-                    best_validation_loss = this_validation_loss
-                    best_iter = iter
-                    
-                    
-                    print 'Saving the best validation network'
-                    genVariables = [epoch,best_validation_loss,finetune_lr,patience,iter]
-                    save_file = open(prefix+'fine_tuning.pkl','wb')
-                    cPickle.dump(hidden_layers_sizes, save_file)
-                    cPickle.dump(genVariables, save_file)
-                    for j in xrange(len(sda.params)):
-                        cPickle.dump(sda.params[j].get_value(borrow=True), save_file, protocol = cPickle.HIGHEST_PROTOCOL)
-                    save_file.close()
-                    
-                    
+    #        if epochFlag_fineTuning is 1 and epoch < epochs_done_fineTuning:
+    #            epoch = epochs_done_fineTuning
+    #            epochFlag_fineTuning = 0
                 
-                    # test it on the test set
-                    test_losses = test_model()
-                    test_score = numpy.mean(test_losses)
-                    print(('     epoch %i, minibatch %i/%i, test error of '
-                           'best model %f %%') %
+            epoch = epoch + 1
+            ################################confusion matrix block 2#################
+            if epoch%cnf_freq==0:
+                pred_c = np.array([])
+                for minibatch_index in xrange(n_train_batches):
+                    pred_c = np.concatenate([pred_c,np.array(prediction(minibatch_index))])
+            
+                cnf_matrix = confusion_matrix(y_truth, pred_c)
+                print cnf_matrix
+            ##########################################################################
+            c = []
+            for minibatch_index in xrange(n_train_batches):
+                minibatch_avg_cost = train_fn(index=minibatch_index,lr=finetune_lr)
+                c.append(minibatch_avg_cost)
+    #            if iterFlag is 1 and iter < iters_done:
+    #                iter = iters_done
+    #                iterFlag = 0
+                        
+                iter = (epoch - 1) * n_train_batches + minibatch_index
+
+                if (iter + 1) % validation_frequency == 0:
+                    validation_losses = validate_model()
+                    this_validation_loss = numpy.mean(validation_losses)
+                    print('epoch %i, minibatch %i/%i, validation error %f %%' %
                           (epoch, minibatch_index + 1, n_train_batches,
-                           test_score * 100.))
-                           
-                    print 'Training cost: ', np.mean(c)
-                else:
-                    adapt_counter = adapt_counter+1
-                if adapt_counter>20:
-                    adapt_counter=0
-                    finetune_lr = 0.8*finetune_lr
-                    print 'Reduced learning rate : ', finetune_lr
+                           this_validation_loss * 100.))
+                    log_valid_cost.append(this_validation_loss)
+
+                    # if we got the best validation score until now
+                    if this_validation_loss < best_validation_loss:
+
+                        #improve patience if loss improvement is good enough
+                        if (
+                            this_validation_loss < best_validation_loss *
+                            improvement_threshold
+                        ):
+                            patience = max(patience, iter * patience_increase)
+
+                        # save best validation score and iteration number
+                        best_validation_loss = this_validation_loss
+                        best_iter = iter
+                        
+                        
+                        print 'Saving the best validation network'
+                        genVariables = [epoch,best_validation_loss,finetune_lr,patience,iter]
+                        save_file = open(prefix+'fine_tuning.pkl','wb')
+                        cPickle.dump(hidden_layers_sizes, save_file)
+                        cPickle.dump(genVariables, save_file)
+                        for j in xrange(len(sda.params)):
+                            cPickle.dump(sda.params[j].get_value(borrow=True), save_file, protocol = cPickle.HIGHEST_PROTOCOL)
+                        save_file.close()
+                        
+                        
                     
-            #if patience <= iter:
-            #    done_looping = True
-            #    break
+                        # test it on the test set
+                        test_losses = test_model()
+                        test_score = numpy.mean(test_losses)
+                        print(('     epoch %i, minibatch %i/%i, test error of '
+                               'best model %f %%') %
+                              (epoch, minibatch_index + 1, n_train_batches,
+                               test_score * 100.))
+                               
+                        print 'Training cost: ', np.mean(c)
+                    else:
+                        adapt_counter = adapt_counter+1
+                    if adapt_counter>20:
+                        adapt_counter=0
+                        finetune_lr = 0.8*finetune_lr
+                        print 'Reduced learning rate : ', finetune_lr
 
-    end_time = time.clock()
-    print(
-        (
-            'Optimization complete with best validation score of %f %%, '
-            'on iteration %i, '
-            'with test performance %f %%'
+                    else:
+                        finetune_lr = finetune_lr_initial / (1 + epoch * 5e-05)
+                        
+                #if patience <= iter:
+                #    done_looping = True
+                #    break
+
+        end_time = time.clock()
+        print(
+            (
+                'Optimization complete with best validation score of %f %%, '
+                'on iteration %i, '
+                'with test performance %f %%'
+            )
+            % (best_validation_loss * 100., best_iter + 1, test_score * 100.)
         )
-        % (best_validation_loss * 100., best_iter + 1, test_score * 100.)
-    )
-    print >> sys.stderr, ('The training code for file ' +
-                          os.path.split(__file__)[1] +
-                          ' ran for %.2fm' % ((end_time - start_time) / 60.))
+        print >> sys.stderr, ('The training code for file ' +
+                              os.path.split(__file__)[1] +
+                              ' ran for %.2fm' % ((end_time - start_time) / 60.))
 
-    valid_file = open(prefix+'log_valid_error.txt', 'w')
-    valid_file.write('Best validation error: '+str(best_validation_loss*100))
-    valid_file.write('\nBest test error: '+str(test_score*100))
-    valid_file.close()
-    finetune_log_file = open(prefix + 'log_finetune_cost.txt', "a")
-    for l in log_valid_cost:
-        finetune_log_file.write("%f\n"%l)
-    finetune_log_file.close()
+        valid_file = open(prefix+'log_valid_error.txt', 'w')
+        valid_file.write('Best validation error: '+str(best_validation_loss*100))
+        valid_file.write('\nBest test error: '+str(test_score*100))
+        valid_file.close()
+        finetune_log_file = open(prefix + 'log_finetune_cost.txt', "a")
+        for l in log_valid_cost:
+            finetune_log_file.write("%f\n"%l)
+        finetune_log_file.close()
 
 if __name__ == '__main__':
     test_SdA()

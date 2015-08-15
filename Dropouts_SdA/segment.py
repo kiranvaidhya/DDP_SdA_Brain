@@ -21,7 +21,7 @@ import subprocess
 
 testingImages = 24
 
-prefix = '9x9x3'
+prefix = '11x11x3-DecayedLR'
 new_prefix = prefix + 'dropout_'
 prefix_list = [new_prefix + 'Masked_RawOutput.nii' + 'WT', new_prefix + 'Masked_RawOutput.nii'+ 'TC', new_prefix + 'Masked_RawOutput.nii'+ 'AT']
 
@@ -31,11 +31,11 @@ if __name__ == '__main__':
     
     root = '/media/brain/1A34723D34721BC7/BRATS/varghese/Recon_2013_data/'
     
-    patch_size_x = 9
-    patch_size_y = 9
+    patch_size_x = 11
+    patch_size_y = 11
     patch_size_z = 3
     recon_flag = False
-    batch_size = 100
+    batch_size = 50
     
     if recon_flag == True:
         n_ins = patch_size_x * patch_size_y * patch_size_z * 5
@@ -45,7 +45,9 @@ if __name__ == '__main__':
     noise_type = 0
     noise_dict = {1:'Gaussian noise', 0:'Masking Noise'}
     
-    hidden_layers_sizes = [2000,1000,500]
+    ## CHECK IMAGE SHAPES FOR PRINTING WEIGHTS ##
+    hidden_layers_sizes = [3000,1000,500]
+    ## CHECK IMAGE SHAPES FOR PRINTING WEIGHTS ##
     corruption_levels = [0.1,0.2,0.2,0.2]
     
     test_path = root + 'testing'
@@ -66,7 +68,7 @@ if __name__ == '__main__':
 #    print 'Validation patches extracted!' 
 #    
 
-    ############################# PIXEL OFFSET !!!!!!!!!!!!!!!!!!!!!!!!! @@@
+    ########################### PIXEL OFFSET !!!!!!!!!!!!!!!!!!!!!!!!! @@@
     # print 'Extracting perfect Balanced Patches...'
     # perfect_balance_3D(patch_size_x, patch_size_y, patch_size_z, prefix, root+'training', root+'BRATS_training_patches/')
     # perfect_balance_3D(patch_size_x, patch_size_y, patch_size_z, prefix, root+'validation', root+'BRATS_validation_patches/')
@@ -89,13 +91,13 @@ if __name__ == '__main__':
     # os.mkdir('/media/brain/1A34723D34721BC7/BRATS/codes/results/test_'+str(test_num)+'_'+prefix)
     # test_root = '/media/brain/1A34723D34721BC7/BRATS/codes/results/test_'+str(test_num)+'_'+prefix+'/'
                                       
-    test_root = '/media/brain/1A34723D34721BC7/BRATS/codes/results/test_255_9x9x3/'
+    test_root = '/media/brain/1A34723D34721BC7/BRATS/codes/results/test_269_11x11x3-DecayedLR/'
     print 'Calling test_SdA...'
     
     finetune_lr = 0.01
-    pretraining_epochs = 250
+    pretraining_epochs = 200
     pretrain_lr = 0.001
-    training_epochs = 150
+    training_epochs = 200
     
     f = open(test_root+prefix+'_params_info.txt', 'w')
     f.write( "Current date & time " + time.strftime("%c"))
@@ -121,7 +123,7 @@ if __name__ == '__main__':
     #             root+'BRATS_training_patches/u_trainlabel_3D_'+prefix+'_.npy',
     #             root+'BRATS_validation_patches/u_validpatch_3D_'+prefix+'_.npy',
     #             root+'BRATS_validation_patches/u_validlabel_3D_'+prefix+'_.npy',
-    #             batch_size, n_ins, n_outs, hidden_layers_sizes, test_root + prefix, corruption_levels, True)
+    #             batch_size, n_ins, n_outs, hidden_layers_sizes, test_root + prefix, corruption_levels, False, True)
                 
     # print 'Network Trained and Saved!'                
                 
@@ -132,13 +134,13 @@ if __name__ == '__main__':
 	# LesionMasker(test_path + '/' , prefix)
     # binarize(test_root, prefix + 'Masked_RawOutput.nii')
 
-    layer_sizes = [972,2000,1000,500,5]
+    layer_sizes = [1452,3000,1000,500,5]
 
-    dropout_rates = [[0.0, 0.0, 0.2, 0.1], [0.0,0.0,0.4,0.4], [0.2,0.2,0.4,0.4]]
+    dropout_rates = [[0.0, 0.0, 0.4, 0.4], [0.0,0.0,0.4,0.4], [0.2,0.2,0.4,0.4]]
 
 
     runMLP2(finetune_lr,
-            150,
+            training_epochs,
             batch_size,
             layer_sizes,
             dropout_rates[0],
@@ -164,7 +166,7 @@ if __name__ == '__main__':
 	   #      root+'BRATS_validation_patches/u_validlabel_3D_'+prefix+'_.npy',
 	   #      test_root + prefix + '_' + str(i))
 #########################################################################################
-    test_network(test_root,new_prefix,test_path,9,9,3,False,3)
+    test_network(test_root,new_prefix,test_path,11,11,3,False,3)
 
     # ### START OF POST-PROCESSING PIPELINE ###
 

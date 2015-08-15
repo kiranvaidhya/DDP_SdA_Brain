@@ -10,6 +10,7 @@ from mha import *
 from mha2 import *
 import numpy as np
 import os
+from random import shuffle
 from sklearn.feature_extraction import image
 #from matplotlib import pyplot as plt
 
@@ -20,11 +21,11 @@ def U_Patch_Preprocess_recon_3D(patch_size_x=5,patch_size_y=5,patch_size_z=5,pre
         
     patch_pixels = patch_size_x*patch_size_y*patch_size_z
     
-    pixel_offset_x = int(patch_size_x*0.7)
-    pixel_offset_y = int(patch_size_y*0.7)
-    pixel_offset_z = 1
+    pixel_offset_x = int(patch_size_x*0.5)
+    pixel_offset_y = int(patch_size_y*0.5)
+    pixel_offset_z = 2
     
-    padding = patch_size_x
+    padding = patch_size_x/2
     #patches = np.zeros(patch_pixels*4)
     if recon_flag is True:
         recon_num = 5
@@ -91,6 +92,16 @@ def U_Patch_Preprocess_recon_3D(patch_size_x=5,patch_size_y=5,patch_size_z=5,pre
         if recon_flag is True:
             Recon_image=Recon_image.data
         Truth_image = Truth_image.data
+        ######################################################################
+        ##################Converting truth####################################
+        # new_Truth_image = np.zeros(Truth_image.shape,dtype=int)
+        # new_Truth_image[np.where(Truth_image==0)] = 0
+        # new_Truth_image[np.where(Truth_image==1)] = 4
+        # new_Truth_image[np.where(Truth_image==2)] = 1
+        # new_Truth_image[np.where(Truth_image==3)] = 3
+        # new_Truth_image[np.where(Truth_image==4)] = 2
+        # Truth_image = new_Truth_image
+        ######################################################################
         
         x_span,y_span,z_span = np.where(Truth_image!=0)
         x_start = np.min(x_span) - padding
@@ -131,21 +142,59 @@ def U_Patch_Preprocess_recon_3D(patch_size_x=5,patch_size_y=5,patch_size_z=5,pre
             
         patches = np.vstack([patches,slice_patch])
         ground_truth = np.vstack([ground_truth, Truth_patch])
+        
+        #######################################################################
+        ##########Extracting more patches from ground truth####################
+        Flair_image[x_start:x_stop, y_start:y_stop, z_start:z_stop] = 0
+        Flair_patch = image.extract_patches(Flair_image, [patch_size_x,patch_size_y,patch_size_z],(pixel_offset_x,pixel_offset_y,pixel_offset_z))
+        T1_patch = image.extract_patches(T1_image, [patch_size_x,patch_size_y,patch_size_z],(pixel_offset_x,pixel_offset_y,pixel_offset_z))
+        T2_patch = image.extract_patches(T2_image, [patch_size_x,patch_size_y,patch_size_z],(pixel_offset_x,pixel_offset_y,pixel_offset_z))
+        T_1c_patch = image.extract_patches(T_1c_image, [patch_size_x,patch_size_y,patch_size_z],(pixel_offset_x,pixel_offset_y,pixel_offset_z))
+        Truth_patch = image.extract_patches(Truth_image, [patch_size_x,patch_size_y,patch_size_z],(pixel_offset_x,pixel_offset_y,pixel_offset_z))
+        
+        print 'New Raw patches extracted' 
+        Flair_patch = Flair_patch.reshape(Flair_patch.shape[0]*Flair_patch.shape[1]*Flair_patch.shape[2], patch_size_x*patch_size_y*patch_size_z)
+        T1_patch = T1_patch.reshape(T1_patch.shape[0]*T1_patch.shape[1]*T1_patch.shape[2], patch_size_x*patch_size_y*patch_size_z)
+        T2_patch = T2_patch.reshape(T2_patch.shape[0]*T2_patch.shape[1]*T2_patch.shape[2], patch_size_x*patch_size_y*patch_size_z)  
+        T_1c_patch = T_1c_patch.reshape(T_1c_patch.shape[0]*T_1c_patch.shape[1]*T_1c_patch.shape[2], patch_size_x*patch_size_y*patch_size_z)
+        Truth_patch = Truth_patch.reshape(Truth_patch.shape[0]*Truth_patch.shape[1]*Truth_patch.shape[2], patch_size_x, patch_size_y, patch_size_z)
+        
+        indexx = np.where(Flair_patch[:,int(patch_size_x*patch_size_y*patch_size_z/2)]>1.5)
+        indexx = indexx[0]
+        shuffle(indexx)
+        if len(indexx)>250:
+            indexx = indexx[0:250]
+            
+            
+        Flair_patch = Flair_patch[indexx,:]
+        T1_patch = T1_patch[indexx,:]
+        T2_patch = T2_patch[indexx,:]
+        T_1c_patch = T_1c_patch[indexx,:]
+        Truth_patch =Truth_patch[indexx, :]
+        
+        slice_patch = np.concatenate([Flair_patch, T1_patch, T2_patch, T_1c_patch], axis=1)
+#        slice_patch = slice_patch[0,:,:]
+        Truth_patch = Truth_patch[:,(patch_size_x-1)/2,(patch_size_y-1)/2,(patch_size_z-1)/2]
+        Truth_patch = np.array(Truth_patch)
+        Truth_patch = Truth_patch.reshape(len(Truth_patch),1)
+        
+        patches = np.vstack([patches,slice_patch])
+        ground_truth = np.vstack([ground_truth, Truth_patch])
+        print 'Extra patches added! ', len(indexx)
+        print 'Patches reshaped'
+        #######################################################################
     #
     #
     print 'Number of non-zeros in ground truth : ', np.sum((ground_truth!=0).astype(int))
     print 'Number of zeros in ground truth : ', np.sum((ground_truth==0).astype(int))
     
     print
-    print 'No. of 1 : ', np.sum((ground_truth==1).astype(int))
-    print 'No. of 2 : ', np.sum((ground_truth==2).astype(int))
-    print 'No. of 3 : ', np.sum((ground_truth==3).astype(int))
-    print 'No. of 4 : ', np.sum((ground_truth==4).astype(int))
+    print 'No. of 1 Necrotic: ', np.sum((ground_truth==1).astype(int))
+    print 'No. of 2 Edyma: ', np.sum((ground_truth==2).astype(int))
+    print 'No. of 3 Non-enhancing: ', np.sum((ground_truth==3).astype(int))
+    print 'No. of 4 Enhancing: ', np.sum((ground_truth==4).astype(int))
     
     ground_truth = ground_truth.reshape(len(ground_truth))
-    
-    if recon_flag==False:
-        patches = patches[:,0:patch_size_x*patch_size_y*patch_size_z*4]
     
     #np.save('Training_patches.npy',patches)
     #np.save('Training_labels.npy',ground_truth)

@@ -6,7 +6,7 @@ Created on Tue Jul  7 15:32:15 2015
 
 import nibabel as nib
 from scipy.ndimage.filters import gaussian_filter
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import numpy as np
 #from skimage.morphology import ball, erosion, dilation
 from scipy import ndimage

@@ -219,26 +219,17 @@ class SdA(object):
         # minibatch given by self.x and self.y
         self.errors = self.logLayer.errors(self.y)
         self.pred = self.logLayer.y_pred
-#        self.confusion = self.logLayer.confusion(self.y)
 
-#    def get_pred(self, train_set_x, batch_size, index):
-#        index1 = T.lscalar()
-#        prediction = theano.function(
-#            inputs=[index1],
-#            outputs=self.pred,
-#            givens={
-#                self.x: train_set_x[index1 * batch_size: (index1 + 1) * batch_size]
-#            }
-#        )
-#        
-#        n_train_batches = train_set_x.get_value(borrow=True).shape[0] / batch_size
-#        confusion_m = numpy.zeros([5,5])
-#        for i in xrange(n_train_batches):
-#            y_pred = prediction(i)
-#            cm = confusion_matrix(train_set_x[index1 * batch_size: (index1 + 1) * batch_size], y_pred)
-#            confusion_m = confusion_m+cm
-#        return confusion_m
-        
+   
+######################################################################
+##################For confusion matrix#########################
+    def get_prediction(self, train_set_x, batch_size):
+        index = T.lscalar('index')
+        prediction = theano.function(inputs = [index], outputs = self.pred,
+                  givens={self.x: train_set_x[index * batch_size: (index + 1) * batch_size]})
+        return prediction
+#####################################################################   
+     
     def pretraining_functions(self, train_set_x, batch_size):
         ''' Generates a list of functions, each of them implementing one
         step in trainnig the dA corresponding to the layer with same index.
@@ -293,66 +284,7 @@ class SdA(object):
 
         return pretrain_fns
         
-    def logpretrain_functions(self, datasets, batch_size, learning_rate):
-        train_set_x, train_set_y = datasets[0]
-        valid_set_x, valid_set_y = datasets[1]
-        test_set_x, test_set_y = datasets[2]
-        
-        n_train_batches = train_set_x.get_value(borrow=True).shape[0] / batch_size
-        n_valid_batches = valid_set_x.get_value(borrow=True).shape[0] / batch_size
-        n_test_batches = test_set_x.get_value(borrow=True).shape[0] / batch_size
-        index = T.lscalar()  # index to a [mini]batch
     
-        # generate symbolic variables for input (x and y represent a
-        # minibatch)
-        x = T.matrix('x')  # data, presented as rasterized images
-        y = T.ivector('y')
-        
-        cost = self.finetune_cost
-        test_model = theano.function(
-            inputs=[index],
-            outputs=self.errors,
-            givens={
-                self.x: test_set_x[index * batch_size: (index + 1) * batch_size],
-                self.y: test_set_y[index * batch_size: (index + 1) * batch_size]
-            }
-        )
-    
-        validate_model = theano.function(
-            inputs=[index],
-            outputs=self.errors,
-            givens={
-                self.x: valid_set_x[index * batch_size: (index + 1) * batch_size],
-                self.y: valid_set_y[index * batch_size: (index + 1) * batch_size]
-            }
-        )
-        def valid_score():
-            return [validate_model(i) for i in xrange(n_valid_batches)]
-        
-    
-        # compute the gradient of cost with respect to theta = (W,b)
-        g_W = T.grad(cost=cost, wrt=self.params[-2])
-        g_b = T.grad(cost=cost, wrt=self.params[-1])
-    
-        # start-snippet-3
-        # specify how to update the parameters of the model as a list of
-        # (variable, update expression) pairs.
-        updates = [(self.params[-2], self.params[-2] - learning_rate * g_W),
-                   (self.params[-1], self.params[-1] - learning_rate * g_b)]
-    
-        # compiling a Theano function `train_model` that returns the cost, but in
-        # the same time updates the parameter of the model based on the rules
-        # defined in `updates`
-        train_model = theano.function(
-            inputs=[index],
-            outputs=cost,
-            updates=updates,
-            givens={
-                self.x: train_set_x[index * batch_size: (index + 1) * batch_size],
-                self.y: train_set_y[index * batch_size: (index + 1) * batch_size]
-            }
-        )
-        return train_model, valid_score, test_model
         
         
     def build_finetune_functions(self, datasets, batch_size):
@@ -407,8 +339,8 @@ class SdA(object):
 #        self.SdA_pretrain_params = self.params[:-2]
 #        self.SdA_finetune_params = self.params[-2:]
 
-        u = sgd(self.finetune_cost, self.params[:-2], learning_rate = learning_rate)
-        v = sgd(self.finetune_cost, self.params[-2:], learning_rate = learning_rate)
+        u = rmsprop(self.finetune_cost, self.params[:-2], learning_rate = learning_rate)
+        v = rmsprop(self.finetune_cost, self.params[-2:], learning_rate = learning_rate)
         
         u.update(v)
         updates = u

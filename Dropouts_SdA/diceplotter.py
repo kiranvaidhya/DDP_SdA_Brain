@@ -63,7 +63,7 @@ def performCalc(startline, stopline, jump, contents):
 
 
 if __name__ == '__main__':
-	calculateDice()
+	calculateDice('9x9x32dropout_.txt',24)
     
     
     

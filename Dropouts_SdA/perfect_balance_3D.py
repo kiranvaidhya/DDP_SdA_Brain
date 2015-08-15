@@ -20,9 +20,9 @@ def perfect_balance_3D(patch_size_x=5,patch_size_y=5,patch_size_z=5,prefix='SdA'
     
     patch_pixels = patch_size_x*patch_size_y*patch_size_z
     
-    pixel_offset_x = int(patch_size_x*0.7)
-    pixel_offset_y = int(patch_size_y*0.7)
-    pixel_offset_z = 1
+    pixel_offset_x = int(patch_size_x*0.5)
+    pixel_offset_y = int(patch_size_y*0.5)
+    pixel_offset_z = 2
     
     padding = patch_size_x
     #threshold = patch_pixels*0.3
@@ -92,6 +92,16 @@ def perfect_balance_3D(patch_size_x=5,patch_size_y=5,patch_size_z=5,prefix='SdA'
         T2_image = T2_image.data
         T_1c_image = T_1c_image.data
         Truth_image = Truth_image.data
+        ######################################################################
+        ##################Converting truth####################################
+        # new_Truth_image = np.zeros(Truth_image.shape,dtype=int)
+        # new_Truth_image[np.where(Truth_image==0)] = 0
+        # new_Truth_image[np.where(Truth_image==1)] = 4
+        # new_Truth_image[np.where(Truth_image==2)] = 1
+        # new_Truth_image[np.where(Truth_image==3)] = 3
+        # new_Truth_image[np.where(Truth_image==4)] = 2
+        # Truth_image = new_Truth_image
+        ######################################################################
         
         x_span,y_span,z_span = np.where(Truth_image!=0)
         x_start = np.min(x_span) - padding
@@ -122,8 +132,8 @@ def perfect_balance_3D(patch_size_x=5,patch_size_y=5,patch_size_z=5,prefix='SdA'
         for i in xrange(0,5):
             num_of_class.append(np.sum((T_patch==i).astype(int)))
         minim = min(x for x in num_of_class if x!=0)
-        if minim > 1000:
-            minim = 1000
+        if minim > 3000:
+            minim = 3000
         slice_patch = np.zeros(patch_size_x*patch_size_y*patch_size_z*recon_num)
 #        print ' CHECK ', slice_patch.shape
         Truth_patch = np.zeros(1)
@@ -146,26 +156,70 @@ def perfect_balance_3D(patch_size_x=5,patch_size_y=5,patch_size_z=5,prefix='SdA'
 #            print Truth_patch.shape
 #            print T_patch.shape
             Truth_patch = np.vstack([Truth_patch, T_patch[index_x[index1[0:minim]]]])
-        print 'No. of 0 : ', np.sum((Truth_patch==0).astype(int))    
-        print 'No. of 1 : ', np.sum((Truth_patch==1).astype(int))
-        print 'No. of 2 : ', np.sum((Truth_patch==2).astype(int))
-        print 'No. of 3 : ', np.sum((Truth_patch==3).astype(int))
-        print 'No. of 4 : ', np.sum((Truth_patch==4).astype(int))
-            
-        patches = np.vstack([patches,slice_patch])
         
+        print 'No. of 0 Normal tissue : ', np.sum((Truth_patch==0).astype(int))    
+        print 'No. of 1 Necrotic : ', np.sum((Truth_patch==1).astype(int))
+        print 'No. of 2 Edyma : ', np.sum((Truth_patch==2).astype(int))
+        print 'No. of 3 Non-Enhancing : ', np.sum((Truth_patch==3).astype(int))
+        print 'No. of 4 Enhancing : ', np.sum((Truth_patch==4).astype(int))
+            
+        patches = np.vstack([patches,slice_patch])        
         ground_truth = np.vstack([ground_truth, Truth_patch])
+        
+        #######################################################################
+        ##########Extracting more patches from ground truth####################
+        Flair_image[x_start:x_stop, y_start:y_stop, z_start:z_stop] = 0
+        Flair_patch = image.extract_patches(Flair_image, [patch_size_x,patch_size_y,patch_size_z],(pixel_offset_x,pixel_offset_y,pixel_offset_z))
+        T1_patch = image.extract_patches(T1_image, [patch_size_x,patch_size_y,patch_size_z],(pixel_offset_x,pixel_offset_y,pixel_offset_z))
+        T2_patch = image.extract_patches(T2_image, [patch_size_x,patch_size_y,patch_size_z],(pixel_offset_x,pixel_offset_y,pixel_offset_z))
+        T_1c_patch = image.extract_patches(T_1c_image, [patch_size_x,patch_size_y,patch_size_z],(pixel_offset_x,pixel_offset_y,pixel_offset_z))
+        Truth_patch = image.extract_patches(Truth_image, [patch_size_x,patch_size_y,patch_size_z],(pixel_offset_x,pixel_offset_y,pixel_offset_z))
+        
+        print 'New Raw patches extracted' 
+        Flair_patch = Flair_patch.reshape(Flair_patch.shape[0]*Flair_patch.shape[1]*Flair_patch.shape[2], patch_size_x*patch_size_y*patch_size_z)
+        T1_patch = T1_patch.reshape(T1_patch.shape[0]*T1_patch.shape[1]*T1_patch.shape[2], patch_size_x*patch_size_y*patch_size_z)
+        T2_patch = T2_patch.reshape(T2_patch.shape[0]*T2_patch.shape[1]*T2_patch.shape[2], patch_size_x*patch_size_y*patch_size_z)  
+        T_1c_patch = T_1c_patch.reshape(T_1c_patch.shape[0]*T_1c_patch.shape[1]*T_1c_patch.shape[2], patch_size_x*patch_size_y*patch_size_z)
+        Truth_patch = Truth_patch.reshape(Truth_patch.shape[0]*Truth_patch.shape[1]*Truth_patch.shape[2], patch_size_x, patch_size_y, patch_size_z)
+        
+        indexx = np.where(Flair_patch[:,int(patch_size_x*patch_size_y*patch_size_z/2)]>1.5)
+        indexx = indexx[0]
+        shuffle(indexx)
+        if len(indexx)>500:
+            indexx = indexx[0:500]
+#        print indexx.shape
+        Flair_patch = Flair_patch[indexx,:]
+        T1_patch = T1_patch[indexx,:]
+        T2_patch = T2_patch[indexx,:]
+        T_1c_patch = T_1c_patch[indexx,:]
+        
+        Truth_patch =Truth_patch[indexx, :]
+#        print Truth_patch.shape
+#        print Flair_patch.shape
+        slice_patch = np.concatenate([Flair_patch, T1_patch, T2_patch, T_1c_patch], axis=1)
+        Truth_patch = Truth_patch[:,(patch_size_x-1)/2,(patch_size_y-1)/2,(patch_size_z-1)/2]
+        Truth_patch = np.array(Truth_patch)
+#        print Truth_patch.shape
+        Truth_patch = Truth_patch.reshape(len(Truth_patch),1)
+#        slice_patch = slice_patch[0,:,:]
+        
+#        print patches.shape
+#        print slice_patch.shape
+        patches = np.vstack([patches,slice_patch])
+        ground_truth = np.vstack([ground_truth, Truth_patch])
+        print 'Extra patches added! ', len(indexx)
+        print 'Patches reshaped'
+        #######################################################################
         print ground_truth.shape
         print patches.shape
 
     ground_truth = ground_truth.reshape(len(ground_truth))
-    print 'No. of 0 : ', np.sum((ground_truth==0).astype(int))    
-    print 'No. of 1 : ', np.sum((ground_truth==1).astype(int))
-    print 'No. of 2 : ', np.sum((ground_truth==2).astype(int))
-    print 'No. of 3 : ', np.sum((ground_truth==3).astype(int))
-    print 'No. of 4 : ', np.sum((ground_truth==4).astype(int))
-    if recon_flag==False:
-        patches = patches[:,0:patch_size_x*patch_size_y*patch_size_z*4]
+    print 'No. of 0 Normal tissue: ', np.sum((ground_truth==0).astype(int))    
+    print 'No. of 1 Necrotic: ', np.sum((ground_truth==1).astype(int))
+    print 'No. of 2 Edyma: ', np.sum((ground_truth==2).astype(int))
+    print 'No. of 3 Non-enhancing: ', np.sum((ground_truth==3).astype(int))
+    print 'No. of 4 Enhancing: ', np.sum((ground_truth==4).astype(int))
+    
     
     #np.save('Training_patches.npy',patches)
     #np.save('Training_labels.npy',ground_truth)

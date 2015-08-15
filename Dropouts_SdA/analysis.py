@@ -5,7 +5,7 @@ from segment import prefix_list
 
 truth_list = ['binary_truth_whole_tumor', 'binary_truth_tumor_core', 'binary_truth_active_tumor']
 
-ANTSPATH = '/home/brain/ANTs/antsbin/bin/'
+ANTSPATH = '/home/brain/antsbin/bin/'
 LABELPATH = '/media/brain/1A34723D34721BC7/BRATS/varghese/Recon_2013_data/testing'
 TRUTHPATH = '/media/brain/1A34723D34721BC7/BRATS/varghese/Recon_2013_data/testing'
 

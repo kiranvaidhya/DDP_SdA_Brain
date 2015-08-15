@@ -22,7 +22,7 @@ def binarize(path, prefix):
             # print 'entering'
             for file1 in files:
 
-                  if prefix in file1 and 'TumorCore' not in file1 and 'pen' not in file1:
+                  if prefix in file1 and 'WT' not in file1 and 'TC' not in file1 and 'AT' not in file1:
                   
                         print 'Iteration: ', i+1
 
