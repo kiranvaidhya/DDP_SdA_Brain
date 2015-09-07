@@ -1,0 +1,504 @@
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+                                          ************ All Labels *************
+                      Total  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+                       -nan                0                0                2             -nan                1
+                                       ************ Individual Labels *************
+     Label           Target  Union (jaccard)      Mean (dice)      Volume sim.   False negative   False positive
+         1             -nan                0                0                2             -nan                1
+brats_tcia_pat105_0001
+brats_tcia_pat111_0001
+brats_tcia_pat113_0001
+brats_tcia_pat117_0001
+brats_tcia_pat118_0001
+brats_tcia_pat120_0001
+brats_tcia_pat192_0001
+brats_tcia_pat193_0002
+brats_tcia_pat198_0001
+brats_tcia_pat198_0283
+brats_tcia_pat226_0001
+brats_tcia_pat226_0090
+brats_tcia_pat309_0001
+brats_tcia_pat309_0120
+brats_tcia_pat374_0557
+brats_tcia_pat374_0801
+brats_tcia_pat374_0909
+brats_tcia_pat374_1165
+brats_tcia_pat374_1426
+brats_tcia_pat374_1627
+brats_tcia_pat375_0001
+brats_tcia_pat399_0595
+brats_tcia_pat498_0001
+brats_tcia_pat499_0001
+brats_tcia_pat105_0001
+brats_tcia_pat111_0001
+brats_tcia_pat113_0001
+brats_tcia_pat117_0001
+brats_tcia_pat118_0001
+brats_tcia_pat120_0001
+brats_tcia_pat192_0001
+brats_tcia_pat193_0002
+brats_tcia_pat198_0001
+brats_tcia_pat198_0283
+brats_tcia_pat226_0001
+brats_tcia_pat226_0090
+brats_tcia_pat309_0001
+brats_tcia_pat309_0120
+brats_tcia_pat374_0557
+brats_tcia_pat374_0801
+brats_tcia_pat374_0909
+brats_tcia_pat374_1165
+brats_tcia_pat374_1426
+brats_tcia_pat374_1627
+brats_tcia_pat375_0001
+brats_tcia_pat399_0595
+brats_tcia_pat498_0001
+brats_tcia_pat499_0001
+brats_tcia_pat105_0001
+brats_tcia_pat111_0001
+brats_tcia_pat113_0001
+brats_tcia_pat117_0001
+brats_tcia_pat118_0001
+brats_tcia_pat120_0001
+brats_tcia_pat192_0001
+brats_tcia_pat193_0002
+brats_tcia_pat198_0001
+brats_tcia_pat198_0283
+brats_tcia_pat226_0001
+brats_tcia_pat226_0090
+brats_tcia_pat309_0001
+brats_tcia_pat309_0120
+brats_tcia_pat374_0557
+brats_tcia_pat374_0801
+brats_tcia_pat374_0909
+brats_tcia_pat374_1165
+brats_tcia_pat374_1426
+brats_tcia_pat374_1627
+brats_tcia_pat375_0001
+brats_tcia_pat399_0595
+brats_tcia_pat498_0001
+brats_tcia_pat499_0001
